@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "emojify.js": "^1.1.0",
     "markdown-it": "^7.0.0",
     "moment-timezone": "^0.4.1",
@@ -14,16 +15,20 @@
     "nodemailer-sendmail-transport": "^1.0.0",
     "sequelize": "^3.10.0",
     "sequelize-json": "^2.1.2",
+    "slack-client": "~2.0.6",
     "sqlite3": "^3.1.0",
-    "unique-random-array": "^1.0.0",
-    "slack-client": "~2.0.6"
+    "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
-    "babel": "^5.8.23"
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0"
   },
   "scripts": {
-    "start": "DEBUG=true babel-node index.js",
-    "reset": "babel-node reset.js",
+    "start": "DEBUG=true node entry.js",
+    "reset": "node reset.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brad Daily <brad.daily@gmail.com>",
